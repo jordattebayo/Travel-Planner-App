@@ -45,13 +45,19 @@ npm run build-dev
 ```
 The app should automatically launch in your browser, if not you can type localhost:8080 in the browser.
 
-To run the project on the production server use:
+To run the project on the production server first create your build:
+
+```
+npm run build-prod
+```
+
+Then run the below command in your terminal:
 
 ```
 npm run start
 ```
 
-Then type localhost:5000 in your browser.
+Lastly navigate to localhost:5000 in your browser.
 
 
 
@@ -72,7 +78,7 @@ npm run test
 - JavaScript
 - Webpack
 - Babel
-- Node
+- NodeJS
 
 ### Author
 
