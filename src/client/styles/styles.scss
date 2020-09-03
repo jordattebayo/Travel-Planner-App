@@ -1,77 +1,199 @@
-/* Styles */
+:root {
+  --color-primary: #fff;
+  --color-secondary: #000000;
+  --color-tertiary: #65ccab;
+  --alert: #c2a1aa;
+  --placeholder: #34423e;
+  --color-quintary: #e9f4f7;
+  --font: "Lato", sans-serif;
+}
+
+[data-theme="dark"] {
+  --color-primary: #1b1f3a;
+  --color-secondary: #fff;
+  --color-tertiary: #a64942;
+  --color-quintary: #a64942;
+  --alert: #ff7844;
+  --placeholder: #fff;
+  --font: "Lato", sans-serif;
+}
 
 body {
-  background: #f0ead6;
-  font-family: "Lato", sans-serif;
+  background-color: var(--color-primary);
 }
 
-h1 {
-  font-size: 3.5rem;
+.dest {
+  border: none;
 }
 
-#app {
-  display: grid;
-  background: #f0ead6;
-  color: #e6c511;
-  justify-content: center;
-  grid-gap: 1em;
-  font-size: 2rem;
-  font-family: "Lato", sans-serif;
+#destination {
+  font-size: 3rem;
+  border: none;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
 }
 
-.headline {
-  text-align: center;
-}
-
-.appWrapper {
-  padding: 2rem;
-  border: 1px solid #2d2d2d;
-}
-
-.title {
-  margin-bottom: 2rem;
-}
-
-/*  Basic Styling To Override Default For Basic HTML Elements */
-label {
-  display: block;
-  font-size: 2rem;
-}
-
-input {
-  text-align: center;
-  margin-top: 2em;
-  margin-bottom: 2em;
-  margin-left: 125px;
-  background: #fff;
-  color: #2d2d2d;
-  font-size: 1rem;
-  font-family: "Lato", sans-serif;
-  border: 1px solid #2d2d2d;
-}
-
-textarea {
-  background: #fff;
-  color: #2d2d2d;
-  font-size: 1rem;
-  font-family: "Lato", sans-serif;
-}
-
-button {
-  display: block;
-  background: #fff;
-  color: #2d2d2d;
+#arrive {
+  color: var(--placeholder);
   font-size: 1.5rem;
-  font-family: "Lato", sans-serif;
-  border: 1px solid #2d2d2d;
-  margin-left: 150px;
-  margin-top: 2rem;
+  border: none;
+  background-color: var(--color-primary);
 }
 
-button:hover {
-  background: #2d2d2d;
-  color: #fff;
-  border: 1px solid #fff;
+#depart {
+  color: var(--placeholder);
+  background-color: var(--color-primary);
+  font-size: 1.5rem;
+  border: none;
+}
+
+.opText {
+  color: var(--placeholder);
+}
+
+.oBtn {
+  background-color: var(--color-primary);
+  color: var(--placeholder);
+  border: 1px solid var(--placeholder);
+  height: 30px;
+  width: 90px;
+  margin-left: 15px;
+}
+
+.oBtn:hover {
+  background-color: var(--placeholder);
+  color: var(--color-primary);
+}
+
+.disabledBtn {
+  background-color: var(--placeholder);
+  color: var(--color-primary);
+}
+
+.flight {
+  width: 75%;
+  height: auto;
+  padding: 3%;
+  background-color: var(--color-quintary);
+  display: grid;
+  grid-template-rows: 1fr auto auto auto;
+  grid-template-columns: auto auto auto;
+  box-shadow: 5px 5px 5px var(--color-secondary);
+}
+
+.airline {
+  grid-column: 1/3;
+  grid-row: 1;
+  width: 100%;
+  font-size: 2rem;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.closeBtn {
+  grid-row: 1;
+  grid-column: 4;
+  height: 20px;
+  font-size: 0.75rem;
+  background-color: var(--color-quintary);
+  color: var(--color-secondary);
+  border: none;
+  position: relative;
+  bottom: 5px;
+}
+
+.closeBtn:hover {
+  color: var(--alert);
+  text-decoration: underline;
+}
+
+.flightNumber {
+  grid-column: 1;
+  grid-row: 2;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.flightDepart {
+  color: var(--placeholder);
+  background-color: var(--color-quintary);
+  grid-column: 1;
+  grid-row: 3;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.flightArrow1 {
+  grid-column: 2;
+  grid-row: 3;
+  margin-bottom: 1rem;
+}
+
+.flightArrive {
+  color: var(--placeholder);
+  background-color: var(--color-quintary);
+  grid-column: 3;
+  grid-row: 3;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.flightArrow2 {
+  grid-column: 2;
+  grid-row: 4;
+}
+
+.airportA {
+  grid-column: 1;
+  grid-row: 4;
+  border: none;
+}
+
+.airportB {
+  grid-column: 3;
+  grid-row: 4;
+  border: none;
+}
+
+.closeBtnInfo {
+  display: block;
+  position: relative;
+  left: 38%;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-size: 0.75rem;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.closeBtnInfo:hover {
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: var(--alert);
+}
+
+#logtrip {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-tertiary);
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  right: 5%;
+}
+
+#logtrip:hover {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+}
+
+.hide {
+  display: none;
+}
+
+.hintText {
+  color: var(--alert);
+  background-color: var(--color-primary);
+  font-size: 700;
 }
 
 /* Reset style for HTML element on active to have no border*/
@@ -84,39 +206,112 @@ button:focus {
 /* Style for Placeholder Text*/
 ::placeholder {
   /* Firefox, Chrome, Opera */
-  color: #2d2d2d;
-  font-family: "Lato", sans-serif;
+  color: var(--placeholder);
+  background-color: var(--color-primary);
 }
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: #2d2d2d;
+  color: var(--placeholder);
   font-size: 1rem;
-  font-family: "Lato", sans-serif;
+  font-family: (var(--font));
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: #2d2d2d;
-  font-family: "Lato", sans-serif;
+  color: var(--placeholder);
+  font-family: var(--font);
 }
 
-.hide {
+.footer-text {
+  color: var(--color-secondary);
+  font-size: 1rem;
+}
+
+/* Slider Style */
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  right: 50px;
+  bottom: 70px;
+  float: right;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
   display: none;
 }
 
-#tripLine {
-  color: #2d2d2d;
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  text-align: center;
+.slider {
+  background-color: var(--placeholder);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
 }
 
-#results {
-  color: #2d2d2d;
-  font-size: 1rem;
+.slider:before {
+  background-color: var(--color-primary);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
 }
 
-.resultContainer {
-  display: flex;
+input:checked + .slider {
+  background-color: var(--color-tertiary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.footer {
+  border-top: 1px solid var(--color-secondary);
+}
+
+#loading {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.load {
+  z-index: 10;
+  margin: auto;
+  position: relative;
+  top: 20%;
+  left: 50%;
 }

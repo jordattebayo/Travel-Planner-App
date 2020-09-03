@@ -11,7 +11,6 @@ function updateUi() {
   const weatherContainer = document.getElementById("weather");
   const notesContainer = document.getElementById("notes");
   const resultsContainer = document.getElementById("results");
-  const tripLine = document.getElementById("tripLine");
   const loading = document.getElementById("loading");
 
   //convert dates
@@ -31,9 +30,8 @@ function updateUi() {
   notesContainer.innerHTML = " " + localStorage.getItem("notes") + " ";
 
   //Show results container and hide tripLine
-  resultsContainer.classList.remove("hide");
-  loading.classList.add("hide");
-  tripLine.classList.add("hide");
+  resultsContainer.classList.remove("d-none");
+  loading.classList.add("d-none");
 }
 
 export { updateUi };
