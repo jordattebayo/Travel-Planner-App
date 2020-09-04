@@ -28,110 +28,122 @@
           <div class="slider round"></div>
         </div>    
         <div class="mt-5 container">
-          <div class="dest py-3">
-            <input autofocus="autofocus" type="text" id="destination" placeholder="Where we headed?" />
-          </div>
-          <div class="timeframe">
-            <input type="date" id="arrive" name="arrive" min="2020-06-01" />
-            <span class="arrow">&#10230;</span>
-            <input type="date" id="depart" name="depart" min="2020-06-01" />
-          </div>
-          <div id="flightInfo1" class="holder my-5 flight d-none">
-            <button id="flight1Btn" class="closeBtn" onclick="Client.hideField(event)">Close</button>
-            <input type="text" id="airline1" class ="airline" for="airline1" placeholder="Airline"/><br/>
-            <input type="text" id="flightNumber1" class ="flightNumber" for="flightNumber1" placeholder="Flight ID"/>
-            <input type="date" id="flightDepart1" class ="flightDepart" name="flightDepart1" placeholder="Depart"/>
-            <span class="arrow text-center flightArrow1">&#10230;</span>
-            <input type="date" id="flightArrive1" class ="flightArrive" name="flightArrive1" placeholder="Arrive"/>
-            <input type="text" id="airportA1" class ="airportA" name="airportA1" placeholder="Depart from"/>
-            <span class="arrow text-center flightArrow2">&#10230;</span>
-            <input type="text" id="airportB1" class ="airportB" name="airportB1" placeholder="Arrive at"/>
-          </div>
-          <div id="flightInfo2" class="holder my-5 flight d-none">
-            <button id="flight2Btn" class="closeBtn" onclick="Client.hideField(event)">Close</button>
-            <input type="text" id="airline2" class ="airline" for="airline2" placeholder="Airline"/><br/>
-            <input type="text" id="flightNumber2" class ="flightNumber" for="flightNumber2" placeholder="Flight ID"/>
-            <input type="date" id="flightDepart2" class ="flightDepart" name="flightDepart2" placeholder="Depart"/>
-            <span class="arrow text-center flightArrow1">&#10230;</span>
-            <input type="date" id="flightArrive2" class ="flightArrive" name="flightArrive2" placeholder="Arrive"/>
-            <input type="text" id="airportA2" class ="airportA" name="airportA1" placeholder="Depart from"/>
-            <span class="arrow text-center flightArrow2">&#10230;</span>
-            <input type="text" id="airportB2" class ="airportB" name="airportB1" placeholder="Arrive at"/>
-          </div>
-          <div id="notesField"class="my-5 holder notes d-none">
-            <button id="notesBtn" class="closeBtnInfo" onclick="Client.hideField(event)">Close</button>
-            <textarea
-              class="myInput"
-              id="inputNotes"
-              placeholder="Enter your trip notes here"
-              rows="5"
-              cols="75"
-            ></textarea>
-          </div>
-          <div id="hintContainer" class="mt-5 d-none mx-auto">
-            <p class="d-inline hintText px-2">Please fill out at least both dates and location fields</p>
-          </div>
-          <div class="container py-5">
-            <p class="d-inline opText">Optional:</p>
-            <button id="addFlight" class="oBtn" onclick="Client.addField(event)">+ Flight</buttton>
-            <button id="addNotes" class="oBtn" onclick="Client.addField(event)" >+ Notes</button>
-          </div>
-          <div class="row justify-content-end">
-            <button
-            class="my-3"
-            id="logtrip"
-            type="submit"
-            onsubmit="return Client.logTrip(event)"
-            onclick="return Client.logTrip(event)"
-          >
-            Log Trip!
-            </button>
-          </div>
-          <div class="holder entry">
-          <div id="loading" class="d-none">
-            <div class="spinner-border text-primary load" role="status">
-              <span class="sr-only">Loading...</span>
+          <div id="inputContainer" class="d-none">
+            <div class="dest py-3">
+              <input autofocus="autofocus" type="text" id="destination" placeholder="Where we headed?" />
+            </div>
+            <div class="timeframe">
+              <input type="date" id="arrive" name="arrive" min="2020-06-01" />
+              <span class="arrow">&#10230;</span>
+              <input type="date" id="depart" name="depart" min="2020-06-01" />
+            </div>
+            <div id="flightInfo1" class="holder my-5 flight d-none">
+              <button id="flight1Btn" class="closeBtn" onclick="Client.hideField(event)">Close</button>
+              <input type="text" id="airline1" class ="airline" for="airline1" placeholder="Airline"/><br/>
+              <input type="text" id="flightNumber1" class ="flightNumber" for="flightNumber1" placeholder="Flight ID"/>
+              <input type="date" id="flightDepart1" class ="flightDepart" name="flightDepart1" placeholder="Depart"/>
+              <span class="arrow text-center flightArrow1">&#10230;</span>
+              <input type="date" id="flightArrive1" class ="flightArrive" name="flightArrive1" placeholder="Arrive"/>
+              <input type="text" id="airportA1" class ="airportA" name="airportA1" placeholder="Depart from"/>
+              <span class="arrow text-center flightArrow2">&#10230;</span>
+              <input type="text" id="airportB1" class ="airportB" name="airportB1" placeholder="Arrive at"/>
+            </div>
+            <div id="flightInfo2" class="holder my-5 flight d-none">
+              <button id="flight2Btn" class="closeBtn" onclick="Client.hideField(event)">Close</button>
+              <input type="text" id="airline2" class ="airline" for="airline2" placeholder="Airline"/><br/>
+              <input type="text" id="flightNumber2" class ="flightNumber" for="flightNumber2" placeholder="Flight ID"/>
+              <input type="date" id="flightDepart2" class ="flightDepart" name="flightDepart2" placeholder="Depart"/>
+              <span class="arrow text-center flightArrow1">&#10230;</span>
+              <input type="date" id="flightArrive2" class ="flightArrive" name="flightArrive2" placeholder="Arrive"/>
+              <input type="text" id="airportA2" class ="airportA" name="airportA1" placeholder="Depart from"/>
+              <span class="arrow text-center flightArrow2">&#10230;</span>
+              <input type="text" id="airportB2" class ="airportB" name="airportB1" placeholder="Arrive at"/>
+            </div>
+            <div id="notesField"class="my-5 holder notes d-none">
+              <button id="notesBtn" class="closeBtnInfo" onclick="Client.hideField(event)">Close</button>
+              <textarea
+                class="myInput"
+                id="inputNotes"
+                placeholder="Enter your trip notes here"
+                rows="5"
+                cols="75"
+              ></textarea>
+            </div>
+            <div id="hintContainer" class="mt-5 d-none mx-auto">
+              <p class="d-inline hintText px-2">Please fill out at least both dates and location fields</p>
+            </div>
+            <div class="container py-5">
+              <p class="d-inline opText">Optional:</p>
+              <button id="addFlight" class="oBtn" onclick="Client.addField(event)">+ Flight</buttton>
+              <button id="addNotes" class="oBtn" onclick="Client.addField(event)" >+ Notes</button>
+            </div>
+            <div class="row justify-content-end">
+              <button
+              class="my-3"
+              id="logtrip"
+              type="submit"
+              onsubmit="return Client.logTrip(event)"
+              onclick="return Client.logTrip(event)"
+            >
+              Log Trip!
+              </button>
+            </div>
+            <div class="holder entry">
+              <div id="loading" class="d-none">
+                <div class="spinner-border text-primary load" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div id="results" class="d-none">
-            <img id="pic" src="" />
-            <div>
-              <p>Arrive:</p>
-              <p id="arrival"></p>
+          <div id="results" class="pt-5">
+            <div class="backgroundImage">
+              <div>
+                <p id="location" class="resultHeader">portland</p>
+              </div>
+              <div>
+                <p class="resultsText">Depart:
+                  <span id="departing"></span>
+                </p>
+              </div>
+              <div>
+                <p class="resultsText">Leaving in:
+                  <span id="daysUntil"></span>
+                  <span>days!</span>
+                </p>
+              </div>
+              <div>
+                <p class="resultsText">Gone for:
+                  <span id="duration"></span>
+                  <span>days &</span>
+                  <span id="durationNights"></span>
+                  <span>nights</span>
+              </p>
+              </div>
+              <div>
+                <p class="resultsText">Long:
+                  <span id="long"></span>
+                  <span>Lat:</span>
+                  <span id="lat"></span>
+                </p>
+              </div>
+              <div>
+                <p class="resultsText">Currently
+                  <span id="weather"></span>
+                  <span>degrees</span>
+                </p>
+              </div>
+              <div>
+                <p class="resultsText">Additional Notes:
+                <span id="airline1"></span>
+                <span id="airline2"></span>
+                <span id="notes"></span>
+                </p>
+              </div>
             </div>
-            <div>
-              <p>Depart:</p>
-              <p id="departing"></p>
-            </div>
-            <div>
-              <p>Leaving in:</p>
-              <p id="daysUntil"></p>
-              <p>days</p>
-            </div>
-            <div>
-              <p>Gone for:</p>
-              <p id="duration"></p>
-              <p>days</p>
-            </div>
-            <div>
-              <p>To:</p>
-              <p id="location"></p>
-            </div>
-            <div>
-              <p>Long:</p>
-              <p id="long"></p>
-              <p>Lat:</p>
-              <p id="lat"></p>
-            </div>
-            <div>
-              <p>Current Temperature:</p>
-              <p id="weather"></p>
-            </div>
-            <div>
-              <p>Additional Notes:</p>
-              <p id="notes"></p>
-            </div>
-          </div>
+      <button id="exportBtn" class="exportBtn mt-5">Export to calendar</button>
+      <button id="resetBtn" class="resetBtn mt-5 ml-3">Reset</button>
+      <div class="pictureLink ml-3 mt-5"><a id="pic" class="text-info" target="_blank" href="#">View Picture Source</a></div>
     </div>
       <div class="row align-items-end text-center footer mt-5">
         <p class="footer-text col py-5">
@@ -142,6 +154,7 @@
         </p>
       </div>
     </div>
+  </div>
     <script>
       // Check that service workers are supported
       if ("serviceWorker" in navigator) {

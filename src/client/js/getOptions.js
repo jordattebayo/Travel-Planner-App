@@ -16,6 +16,8 @@ function getOptions() {
   optObj.fArrive2 = document.getElementById("flightArrive2").value;
   optObj.airportA2 = document.getElementById("airportA2").value;
   optObj.airportB2 = document.getElementById("airportB2").value;
+
+  localStorage.setItem("options", JSON.stringify(optObj));
 }
 
 export { getOptions };

@@ -315,3 +315,71 @@ input:checked + .slider:before {
   top: 20%;
   left: 50%;
 }
+
+/* results container */
+
+#location {
+  text-transform: uppercase;
+}
+
+.backgroundImage {
+  background: url("http://place-puppy.com/800x800");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 70vh;
+}
+
+.resultHeader {
+  display: inline;
+  font-size: 3rem;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-weight: 700;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  left: 2%;
+}
+
+.resultsText {
+  display: inline;
+  font-size: 1rem;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  padding: 1px 10px;
+  position: relative;
+  left: 2%;
+}
+
+.pictureLink {
+  display: inline;
+  font-size: 0.75rem;
+  background-color: var(--color-primary);
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--color-secondary);
+}
+
+.exportBtn {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-tertiary);
+  padding: 0.75rem 1.25rem;
+}
+
+.exportBtn:hover {
+  background-color: var(--color-tertiary);
+  color: var(--color-primary);
+}
+
+.resetBtn {
+  background-color: var(--color-primary);
+  color: var(--alert);
+  border: 1px solid var(--alert);
+  padding: 0.75rem 1.25rem;
+}
+
+.resetBtn:hover {
+  background-color: var(--alert);
+  color: var(--color-primary);
+}

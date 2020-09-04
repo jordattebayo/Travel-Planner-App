@@ -1,8 +1,7 @@
-function checkInput(x, y, z, n) {
+function checkInput(x, y, z) {
   let a = x;
   let d = y;
   let loc = z.toLowerCase();
-  let inputNotes = n;
   const hint = document.getElementById("hintContainer");
   const loading = document.getElementById("loading");
 
@@ -16,8 +15,7 @@ function checkInput(x, y, z, n) {
     localStorage.setItem("arrive", a);
     localStorage.setItem("depart", d);
     localStorage.setItem("location", loc);
-    localStorage.setItem("notes", inputNotes);
-    return console.log("items set!");
+    return console.log("Good to go!");
   }
 }
 
