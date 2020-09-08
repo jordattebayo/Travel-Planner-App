@@ -28,7 +28,7 @@
           <div class="slider round"></div>
         </div>    
         <div class="mt-5 container">
-          <div id="inputContainer" class="d-none">
+          <form id="inputContainer" class="">
             <div class="dest py-3">
               <input autofocus="autofocus" type="text" id="destination" placeholder="Where we headed?" />
             </div>
@@ -78,6 +78,7 @@
               <button id="addNotes" class="oBtn" onclick="Client.addField(event)" >+ Notes</button>
             </div>
             <div class="row justify-content-end">
+              <button id="undo" class="resetBtn m-3 d-none" onclick="Client.undo(event)">Undo</button>
               <button
               class="my-3"
               id="logtrip"
@@ -95,11 +96,11 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div id="results" class="pt-5">
-            <div class="backgroundImage">
+          </form>
+          <div id="results" class="pt-5 d-none">
+            <div id="backgroundImg" class="backgroundImage">
               <div>
-                <p id="location" class="resultHeader">portland</p>
+                <p id="location" class="resultHeader"></p>
               </div>
               <div>
                 <p class="resultsText">Depart:
@@ -134,15 +135,15 @@
                 </p>
               </div>
               <div>
-                <p class="resultsText">Additional Notes:
+                <p id="optionalNotes"class="resultsText d-none">Additional Notes:
                 <span id="airline1"></span>
                 <span id="airline2"></span>
                 <span id="notes"></span>
                 </p>
               </div>
             </div>
-      <button id="exportBtn" class="exportBtn mt-5">Export to calendar</button>
-      <button id="resetBtn" class="resetBtn mt-5 ml-3">Reset</button>
+      <button id="exportBtn" class="exportBtn mt-5 d-none">Export to calendar</button>
+      <button id="resetBtn" class="resetBtn mt-5 ml-3 d-none" onclick="Client.reset(event)">Reset</button>
       <div class="pictureLink ml-3 mt-5"><a id="pic" class="text-info" target="_blank" href="#">View Picture Source</a></div>
     </div>
       <div class="row align-items-end text-center footer mt-5">

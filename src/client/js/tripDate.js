@@ -7,8 +7,8 @@ function tripDate(x, y) {
   let days = diff / oneDay;
   let tripCountDown = Math.floor((arrive - now) / oneDay);
 
-  //maybe add in a nights counter in the future...
   localStorage.setItem("duration", days);
+  localStorage.setItem("durationNights", days - 1);
   localStorage.setItem("daysUntil", tripCountDown);
   return tripCountDown;
 }

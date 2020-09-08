@@ -157,8 +157,6 @@ body {
 
 .closeBtnInfo {
   display: block;
-  position: relative;
-  left: 38%;
   color: var(--color-secondary);
   background-color: var(--color-primary);
   font-size: 0.75rem;
@@ -186,8 +184,10 @@ body {
   color: var(--color-primary);
 }
 
-.hide {
-  display: none;
+#undo {
+  position: relative;
+  top: -23%;
+  right: 8%;
 }
 
 .hintText {

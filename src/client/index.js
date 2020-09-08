@@ -10,6 +10,8 @@ import { getWeather } from "./js/getWeather";
 import { tripDate } from "./js/tripDate";
 import { getPicture } from "./js/getPicture";
 import { updateUi } from "./js/updateUi";
+import { reset } from "./js/reset";
+import { undo } from "./js/undo";
 
 export {
   addField,
@@ -22,6 +24,8 @@ export {
   getWeather,
   getPicture,
   updateUi,
+  reset,
+  undo,
 };
 
 //Clear out flight from local storage for returning users
