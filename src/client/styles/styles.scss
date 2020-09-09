@@ -322,8 +322,9 @@ input:checked + .slider:before {
   text-transform: uppercase;
 }
 
-.backgroundImage {
-  background: url("http://place-puppy.com/800x800");
+/* "http://place-puppy.com/800x800" */
+
+#backgroundImg {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

@@ -5,10 +5,14 @@ function tripDate(x, y) {
   let depart = Date.parse(y);
   let diff = depart - arrive;
   let days = diff / oneDay;
+  let nights;
   let tripCountDown = Math.floor((arrive - now) / oneDay);
 
   localStorage.setItem("duration", days);
-  localStorage.setItem("durationNights", days - 1);
+  localStorage.setItem(
+    "durationNights",
+    days >= 0 ? (nights = 1) : (nights = days - 1)
+  );
   localStorage.setItem("daysUntil", tripCountDown);
   return tripCountDown;
 }

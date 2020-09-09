@@ -35,9 +35,9 @@ function updateUi() {
   const lon = localStorage.getItem("long");
   const lat = localStorage.getItem("lat");
   const w = localStorage.getItem("temp");
-  const n = localStorage.getItem("notes");
-  const air1 = JSON.parse(localStorage.getItem("options"));
-  const air2 = JSON.parse(localStorage.getItem("options"));
+  const n = JSON.parse(localStorage.getItem("options")).notes;
+  const air1 = JSON.parse(localStorage.getItem("options")).airline1;
+  const air2 = JSON.parse(localStorage.getItem("options")).airline2;
 
   //Set variables to containers
 
@@ -47,7 +47,11 @@ function updateUi() {
   daysUntilContainer.innerHTML = ` ${days} `;
   locationContainer.innerHTML = ` ${loc} `;
 
-  pic.length > 0 ? (picContainer.backgroundImage = pic) : null;
+  pic.length > 0
+    ? (picContainer.style.backgroundImage = `url(${pic})`)
+    : (picContainer.style.backgroundImage = `url(
+        "http://place-puppy.com/800x800"
+      )`);
 
   if (lon >= 0) {
     longContainer.innerHTML = ` ${lon} `;
