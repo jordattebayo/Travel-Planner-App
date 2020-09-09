@@ -41,9 +41,9 @@
               <button id="flight1Btn" class="closeBtn" onclick="Client.hideField(event)">Close</button>
               <input type="text" id="airline1" class ="airline" for="airline1" placeholder="Airline"/><br/>
               <input type="text" id="flightNumber1" class ="flightNumber" for="flightNumber1" placeholder="Flight ID"/>
-              <input type="date" id="flightDepart1" class ="flightDepart" name="flightDepart1" placeholder="Depart"/>
+              <input type="time" id="flightDepart1" class ="flightDepart" name="flightDepart1" placeholder="Depart"/>
               <span class="arrow text-center flightArrow1">&#10230;</span>
-              <input type="date" id="flightArrive1" class ="flightArrive" name="flightArrive1" placeholder="Arrive"/>
+              <input type="time" id="flightArrive1" class ="flightArrive" name="flightArrive1" placeholder="Arrive"/>
               <input type="text" id="airportA1" class ="airportA" name="airportA1" placeholder="Depart from"/>
               <span class="arrow text-center flightArrow2">&#10230;</span>
               <input type="text" id="airportB1" class ="airportB" name="airportB1" placeholder="Arrive at"/>
@@ -52,9 +52,9 @@
               <button id="flight2Btn" class="closeBtn" onclick="Client.hideField(event)">Close</button>
               <input type="text" id="airline2" class ="airline" for="airline2" placeholder="Airline"/><br/>
               <input type="text" id="flightNumber2" class ="flightNumber" for="flightNumber2" placeholder="Flight ID"/>
-              <input type="date" id="flightDepart2" class ="flightDepart" name="flightDepart2" placeholder="Depart"/>
+              <input type="time" id="flightDepart2" class ="flightDepart" name="flightDepart2" placeholder="Depart"/>
               <span class="arrow text-center flightArrow1">&#10230;</span>
-              <input type="date" id="flightArrive2" class ="flightArrive" name="flightArrive2" placeholder="Arrive"/>
+              <input type="time" id="flightArrive2" class ="flightArrive" name="flightArrive2" placeholder="Arrive"/>
               <input type="text" id="airportA2" class ="airportA" name="airportA1" placeholder="Depart from"/>
               <span class="arrow text-center flightArrow2">&#10230;</span>
               <input type="text" id="airportB2" class ="airportB" name="airportB1" placeholder="Arrive at"/>
@@ -135,9 +135,25 @@
                 </p>
               </div>
               <div id="optionalNotes" class="d-none">
-                <p class="resultsText">Additional Notes:
-                <span id="airline1"></span>
-                <span id="airline2"></span>
+                <p class="resultsText">Additional Notes:<br id="airBreak1" class="d-none"/>
+                <span id="airline1B" class=""></span>
+                <span id="fId1" class=""></span><br id="airBreak" class="d-none"/>
+                <span id="fDep1" class=""></span>
+                <span id="fArrow1" class="arrow text-center flightArrow1 d-none">&#10230;</span>
+                <span id="fArr1" class=""></span><br id="airBreak2" class="d-none"/>
+                <span id="dAir1" class=""></span>
+                <span id="fArrow2" class="arrow text-center flightArrow1 d-none">&#10230;</span>
+                <span id="aAir1" class=""></span>
+                <br id="airBreak3" class="d-none"/>
+                <span id="airline2B" class=""></span>
+                <span id="fId2" class=""></span><br id="airBreak0" class="d-none"/>
+                <span id="fDep2" class=""></span>
+                <span id="fArrow3" class="arrow text-center flightArrow2 d-none">&#10230;</span>
+                <span id="fArr2" class=""></span><br id="airBreak4" class="d-none"/>
+                <span id="dAir2" class=""></span>
+                <span id="fArrow4" class="arrow text-center flightArrow2 d-none">&#10230;</span>
+                <span id="aAir2" class=""></span>
+                <br id="airBreak5" class="d-none"/>
                 <span id="notes"></span>
                 </p>
               </div>
