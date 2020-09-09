@@ -17,6 +17,7 @@ function updateUi() {
   const logButton = document.getElementById("logtrip");
   const exportButton = document.getElementById("exportBtn");
   const resetButton = document.getElementById("resetBtn");
+  const picLinkContainer = document.getElementById("pic");
 
   //Grab HTML Optional Elements
   const notesContainer = document.getElementById("notes");
@@ -52,6 +53,7 @@ function updateUi() {
 
   //Assign localStorage data to Variables
   const pic = localStorage.getItem("picture");
+  const picSource = localStorage.getItem("pictureSource");
   const depart = dDate.toDateString();
   const dur = localStorage.getItem("duration");
   const durNights = localStorage.getItem("durationNights");
@@ -78,6 +80,10 @@ function updateUi() {
     : (picContainer.style.backgroundImage = `url(
         "http://place-puppy.com/800x800"
       )`);
+
+  pic.length > 0
+    ? (picLinkContainer.href = `${picSource}`)
+    : (picLinkContainer.href = "http://place-puppy.com/800x800");
 
   if (lon >= 0) {
     longContainer.innerHTML = ` ${lon} `;

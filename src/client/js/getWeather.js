@@ -29,7 +29,6 @@ function getWeather() {
   fetchWeather(wKey, long, lat, daysUntil)
     .then((response) => response.json())
     .then(function (data) {
-      console.log(data.data[0].temp);
       localStorage.setItem("temp", data.data[0].temp);
     });
 }

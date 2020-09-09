@@ -17,6 +17,7 @@ async function getPicture() {
     .then((response) => response.json())
     .then(function (data) {
       localStorage.setItem("picture", data.hits[0].webformatURL);
+      localStorage.setItem("pictureSource", data.hits[0].pageURL);
     });
 }
 

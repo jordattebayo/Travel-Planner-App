@@ -8,7 +8,7 @@ function hideField(e) {
   if (e.target == addFlight1) {
     const flightInfo1 = document.getElementById("flightInfo1");
     flightInfo1.classList.add("d-none");
-    localStorage.clear();
+    localStorage.removeItem("flight");
   }
 
   if (e.target == addFlight2) {
