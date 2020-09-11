@@ -158,7 +158,8 @@
                 </p>
               </div>
             </div>
-      <button id="exportBtn" class="exportBtn mt-5 d-none">Export to calendar</button>
+      <button id="exportBtn" class="exportBtn mt-5 d-none" onclick="Client.exportIcs(event)">Create Calendar Event</button>
+      <a id="downloadLink" class="d-none exportBtn mt-5 ">Download Event</a>
       <button id="resetBtn" class="resetBtn mt-5 ml-3 d-none" onclick="Client.reset(event)">Reset</button>
       <div class="pictureLink ml-3 mt-5"><a id="pic" class="text-info" target="_blank" href="#">View Picture Source</a></div>
     </div>

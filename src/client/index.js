@@ -12,6 +12,7 @@ import { getPicture } from "./js/getPicture";
 import { updateUi } from "./js/updateUi";
 import { reset } from "./js/reset";
 import { undo } from "./js/undo";
+import { exportIcs } from "./js/exportIcs";
 
 export {
   addField,
@@ -26,6 +27,7 @@ export {
   updateUi,
   reset,
   undo,
+  exportIcs,
 };
 
 //Clear out flight from local storage for returning users
