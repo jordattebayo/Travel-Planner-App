@@ -35,7 +35,6 @@
     "css-loader": "^3.6.0",
     "dotenv-webpack": "^2.0.0",
     "express": "^4.17.1",
-    "js-add-to-calendar-buttons": "^1.0.0",
     "redux": "^4.0.5",
     "sass": "^1.26.9",
     "sass-loader": "^8.0.2",
