@@ -8,7 +8,7 @@ function getWeather() {
     if (du <= 16) {
       try {
         const res = await fetch(
-          `http://api.weatherbit.io/v2.0/forecast/daily?lat=${la}&lon=${lo}&units=I&key=${key}`
+          `//api.weatherbit.io/v2.0/forecast/daily?lat=${la}&lon=${lo}&units=I&key=${key}`
         );
         return res;
       } catch (error) {
@@ -17,7 +17,7 @@ function getWeather() {
     } else {
       try {
         const res = await fetch(
-          `http://api.weatherbit.io/v2.0/current?lat=${la}&lon=${lo}&units=I&key=${key}`
+          `//api.weatherbit.io/v2.0/current?lat=${la}&lon=${lo}&units=I&key=${key}`
         );
         return res;
       } catch (error) {
