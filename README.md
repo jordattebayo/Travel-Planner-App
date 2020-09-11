@@ -83,7 +83,3 @@ npm run test
 ### Author
 
 **Jordan Booker** - [jordattebayo](https://jordanbooker.com)
-
-## Future Plans
-
-There are quite a few things I would like to add, firstly an export function. I would also like to add state, MobX is looking pretty fun. My goal for this app is to actually use it for group trips and then export the itinerary to distribute accordingly.
