@@ -5,7 +5,7 @@ async function getLocation() {
   async function getLongLat(loc, user) {
     try {
       const res = await fetch(
-        `//api.geonames.org/searchJSON?q=${loc}&maxRows=10&username=${user}`
+        `https://secure.geonames.org/searchJSON?q=${loc}&maxRows=10&username=${user}`
       );
       return res;
     } catch (error) {
