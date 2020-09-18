@@ -14,7 +14,7 @@ function logTrip(event) {
     Client.getWeather();
     Client.getPicture();
   }, 1000);
-  setTimeout(Client.updateUi, 1500);
+  setTimeout(Client.updateUi, 2000);
 }
 
 export { logTrip };

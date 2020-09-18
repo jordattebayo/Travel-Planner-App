@@ -3,25 +3,48 @@ function getWeather() {
   let long = localStorage.getItem("long");
   let lat = localStorage.getItem("lat");
   let daysUntil = localStorage.getItem("daysUntil");
+  let loc = localStorage.getItem("location");
 
   async function fetchWeather(key, lo, la, du) {
-    if (du <= 16) {
-      try {
-        const res = await fetch(
-          `https://api.weatherbit.io/v2.0/forecast/daily?lat=${la}&lon=${lo}&units=I&key=${key}`
-        );
-        return res;
-      } catch (error) {
-        console.log("An error has occured", error);
+    if (lo && la) {
+      if (du <= 16) {
+        try {
+          const res = await fetch(
+            `https://api.weatherbit.io/v2.0/forecast/daily?lat=${la}&lon=${lo}&units=I&key=${key}`
+          );
+          return res;
+        } catch (error) {
+          console.log("An error has occured", error);
+        }
+      } else {
+        try {
+          const res = await fetch(
+            `https://api.weatherbit.io/v2.0/current?lat=${la}&lon=${lo}&units=I&key=${key}`
+          );
+          return res;
+        } catch (error) {
+          console.log("An error has occured", error);
+        }
       }
     } else {
-      try {
-        const res = await fetch(
-          `https://api.weatherbit.io/v2.0/current?lat=${la}&lon=${lo}&units=I&key=${key}`
-        );
-        return res;
-      } catch (error) {
-        console.log("An error has occured", error);
+      if (du <= 16) {
+        try {
+          const res = await fetch(
+            `https://api.weatherbit.io/v2.0/forecast/daily?city=${loc}&units=I&key=${key}`
+          );
+          return res;
+        } catch (error) {
+          console.log("An error has occured", error);
+        }
+      } else {
+        try {
+          const res = await fetch(
+            `https://api.weatherbit.io/v2.0/current?city=${loc}&units=I&key=${key}`
+          );
+          return res;
+        } catch (error) {
+          console.log("An error has occured", error);
+        }
       }
     }
   }
