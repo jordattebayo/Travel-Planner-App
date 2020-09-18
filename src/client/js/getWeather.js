@@ -17,7 +17,7 @@ function getWeather() {
     } else {
       try {
         const res = await fetch(
-          `//api.weatherbit.io/v2.0/current?lat=${la}&lon=${lo}&units=I&key=${key}`
+          `https://api.weatherbit.io/v2.0/current?lat=${la}&lon=${lo}&units=I&key=${key}`
         );
         return res;
       } catch (error) {
